@@ -2838,6 +2838,9 @@
 % \end{environment}
 %
 % \subsubsection{索引部分}
+% 本科生需要插图/表格索引。格式要求：标题用黑体小三号字，段前40pt，段后20pt，行距20pt。
+% 内容部分中文采用宋体小四号字，英文采用Times New Roman小四号字，
+% 行距用固定值20pt，段前6pt，段后0pt。
 % \label{sec:threeindex}
 % \changes{v2.5}{2006/05/18}{增加插图、表格和公式索引。}
 % \changes{v2.5}{2006/05/19}{为了让索引中能出现\textbf{图 xxx}，不得不修改 \LaTeX
@@ -2858,8 +2861,8 @@
   \let\numberline\oldnumberline}
 \def\thu@listof#1{% #1: float type
   \@ifstar
-    {\thu@chapter*[]{\csname list#1name\endcsname}\thu@starttoc{#1}}
-    {\thu@chapter*{\csname list#1name\endcsname}\thu@starttoc{#1}}}
+    {\thu@chapter*[]{\csname list#1name\endcsname}\vskip+6bp\thu@starttoc{#1}}
+    {\thu@chapter*{\csname list#1name\endcsname}\vskip+6bp\thu@starttoc{#1}}}
 \renewcommand\listoffigures{\thu@listof{figure}}
 \renewcommand*\l@figure{\@dottedtocline{1}{0em}{4em}}
 \renewcommand\listoftables{\thu@listof{table}}
